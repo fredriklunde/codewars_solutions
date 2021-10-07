@@ -1,10 +1,19 @@
 const Test = require("@codewars/test-compat");
-const isIsogram = require('./solution');
+var assert = require("assert");
 
+const isIsogram = require("./solution");
 
-Test.assertSimilar( isIsogram("Dermatoglyphics"), true );
-Test.assertSimilar( isIsogram("isogram"), true );
-Test.assertSimilar( isIsogram("aba"), false, "same chars may not be adjacent" );
-Test.assertSimilar( isIsogram("moOse"), false, "same chars may not be same case" );
-Test.assertSimilar( isIsogram("isIsogram"), false );
-Test.assertSimilar( isIsogram(""), true, "an empty string is a valid isogram" );
+describe("isIsogram", function () {
+  it("should work for some examples", function () {
+    assert.deepEqual(isIsogram("Dermatoglyphics"), true);
+    assert.deepEqual(isIsogram("isogram"), true);
+    assert.deepEqual(isIsogram("aba"), false, "same chars may not be adjacent");
+    assert.deepEqual(
+      isIsogram("moOse"),
+      false,
+      "same chars may not be same case"
+    );
+    assert.deepEqual(isIsogram("isIsogram"), false);
+    assert.deepEqual(isIsogram(""), true, "an empty string is a valid isogram");
+  });
+});
