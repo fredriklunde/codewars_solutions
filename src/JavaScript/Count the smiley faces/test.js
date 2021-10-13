@@ -2,7 +2,7 @@ const Test = require("@codewars/test-compat");
 
 const countSmileys = require("./solution");
 
-describe("Basic testing", function() {
+describe("countSmileys", function() {
   it("works", () => {
     Test.assertEquals(countSmileys([]), 0);
     Test.assertEquals(countSmileys([':D',':~)',';~D',':)']), 4);
