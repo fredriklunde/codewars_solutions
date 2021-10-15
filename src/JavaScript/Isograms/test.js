@@ -1,4 +1,3 @@
-const Test = require("@codewars/test-compat");
 var assert = require("assert");
 
 const isIsogram = require("./solution");
